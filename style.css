@@ -435,3 +435,58 @@ footer {
 footer p {
   text-align: center;
 }
+
+/*Animations*/
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add animations to specific elements */
+section, footer {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Add animations to navigation */
+nav {
+  animation: fadeIn 1s ease-out, slideUp 1s ease-out;
+}
+
+/* Add animations to buttons */
+.btn {
+  animation: fadeIn 1s ease-out;
+}
+
+
+/* Custom animation for the arrow icon */
+.arrow {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+
