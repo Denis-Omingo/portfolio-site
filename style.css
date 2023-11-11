@@ -436,6 +436,24 @@ footer p {
   text-align: center;
 }
 
+/*whatsapp styles icon*/
+#whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  display: none; 
+}
+
+
+#whatsapp-container img {
+  margin-right: 10px;
+  width: 55px; 
+  height: 55px;
+
+
+}
+
 /*Animations*/
 
 /* Fade-in animation */
