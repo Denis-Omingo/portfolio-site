@@ -1,7 +1,9 @@
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
+:root{
+  --primary-color:rgb(205,95,95);
+}
 * {
   margin: 0;
   padding: 0;
@@ -50,8 +52,9 @@ a {
   text-decoration-color: white;
 }
 
+
 a:hover {
-  color: rgb(128, 128, 128);
+  color:var(--primary-color);
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
@@ -59,10 +62,12 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+  color: rgb(231, 99, 99);
 }
 
 .logo:hover {
   cursor: default;
+  color: var(--primary-color);
 }
 
 /* hamburger menu */
@@ -83,13 +88,14 @@ a:hover {
   height: 24px;
   width: 30px;
   cursor: pointer;
+ 
 }
 
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
-  transition: all 0.3 ease-in-out;
+  background-color: var(--primary-color);
+  transition: all 0.8 ease-in-out;
 }
 
 .menu-links {
@@ -196,6 +202,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  color: var(--primary-color);
 }
 
 #socials-container {
@@ -240,8 +247,11 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
+  
   color: white;
+}
+.btn-color-1{
+  color: var(--primary-color);
 }
 
 .btn-color-1:hover {
@@ -253,7 +263,9 @@ section {
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border: var(--primary-color) 0.1rem solid;
+  background-color: var(--primary-color);
+  color: black;
 }
 
 .btn-container {
@@ -304,7 +316,7 @@ section {
   text-align: center;
 }
 .article-container{
-  min-height: 50vh;
+  min-height: 30vh;
 }
 
 .section-container {
@@ -325,7 +337,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: var(--primary-color);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -342,20 +354,26 @@ section {
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+  gap: 2rem;
+  justify-content: start;
   min-height: 50h;
 }
 
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
+  justify-content: start;
   gap: 0.5rem;
 }
 
 article .icon {
   cursor: default;
+}
+article h3{
+  font-size: 1rem;
+}
+article p{
+  font-size: 0.8rem;
 }
 
 /* projects section */
@@ -364,35 +382,53 @@ article .icon {
   position: relative;
 }
 
-.announcement{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+.portfolio{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:2rem;
 }
-.announcement h3,h4{
-  color: red;
+
+.projects-container {
+  padding: 0rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+  height: 30rem;
 }
 
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+
+}
+.image-container{
+  height: 65%;
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem 2rem 0 0;
 }
 
 .project-title {
-  margin: 1rem;
+  margin: .5rem;
   color: black;
+}
+.project-description{
+  font-size: .8rem;
+  color: rgb(76, 7, 7);
+  padding-bottom: .3rem;
 }
 
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+  height: 3rem;
+  width: 7rem;
 }
 
 /* Contacts page */
@@ -460,6 +496,7 @@ footer p {
   margin-right: 10px;
   width: 55px; 
   height: 55px;
+  border-radius: 50%;
 
 
 }

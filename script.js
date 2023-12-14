@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Hide the WhatsApp container after 20 seconds
     setTimeout(function () {
-      whatsappContainer.style.display = "none";
+      whatsappContainer.style.display="none";
     }, 20000);
   }
 

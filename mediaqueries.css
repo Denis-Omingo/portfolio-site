@@ -1,3 +1,7 @@
+:root{
+  --primary-color:rgb(205,95,95);
+}
+
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -9,6 +13,21 @@
   #contact,
   #projects {
     height: fit-content;
+  }
+  .project-title{
+    color: var(--primary-color);
+  }
+  
+  .project-btn{
+    background-color:var(--primary-color);
+    color: white;
+    border-color:rgb(237, 221, 221); ;
+  }
+  .project-btn:hover{
+    background-color: white;
+    border-color:rgb(239, 100, 100); ;
+    color: var(--primary-color)
+ 
   }
 }
 
@@ -30,6 +49,7 @@
   .arrow {
     display: none;
   }
+
   section,
   .section-container {
     height: fit-content;
@@ -44,6 +64,42 @@
   }
   .about-containers {
     margin-top: 0;
+  }
+  .article-container{
+    flex-direction: column;
+  }
+  .portfolio{
+    gap:1rem;
+  }
+  .projects-container{
+    height: 20rem;
+    width: 11rem;
+  }
+
+  .image-container{
+    height: 60%;
+  }
+  .project-title{
+    font-size: 1rem;
+    color: var(--primary-color);
+  }
+  .btn-container{
+    padding: .5rem;
+  }
+  .project-btn{
+    height: 2.5rem;
+    width: 5.5rem;
+    background-color:var(--primary-color);
+    color: white;
+    border-color:rgb(237, 221, 221); ;
+    font-size: .5rem;
+    padding: .2rem;
+  }
+  .project-btn:hover{
+    background-color: white;
+    border-color:rgb(239, 100, 100); ;
+    color: var(--primary-color)
+ 
   }
 }
 
@@ -81,6 +137,15 @@
   .experience-sub-title {
     font-size: 1.25rem;
   }
+  .portfolio{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:2rem;
+  }
+  .project-btn{
+    height: 2rem;
+    width: 4rem;
+  }
   .logo {
     font-size: 1.5rem;
   }
@@ -103,4 +168,37 @@
   .text-container {
     text-align: justify;
   }
+}
+@media screen and (max-width: 480px) {
+  .portfolio{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+
+.projects-container {
+  padding: 0rem;
+  flex: 1;
+  height: 30rem;
+  width: 100%;
+}
+
+
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.project-title {
+  margin: 1rem;
+  color: var(--primary-color);
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+  height: 3rem;
+  width: 7rem;
+}
 }
