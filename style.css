@@ -2,7 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 :root{
-  --primary-color:rgb(205,95,95);
+  --primary-color:rgb(16, 237, 38);
 }
 * {
   margin: 0;
@@ -62,7 +62,7 @@ a:hover {
 
 .logo {
   font-size: 2rem;
-  color: rgb(231, 99, 99);
+  color: rgb(18, 140, 20);
 }
 
 .logo:hover {
@@ -224,9 +224,16 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  transition: 0.7s ease-in-out;
+}
+.icon:hover {
+  opacity: .8;
+  height: 2.1rem;
+
+
 }
 
-/* buttos styles */
+/* buttons styles */
 
 .btn-container {
   display: flex;
@@ -236,7 +243,7 @@ section {
 
 .btn {
   font-weight: 600;
-  transition: all 300ms ease;
+  transition: all .7s ease-in-out;
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
@@ -413,6 +420,7 @@ article p{
 }
 .image-container{
   height: 65%;
+
 }
 
 .project-img {
@@ -433,7 +441,7 @@ article p{
 
 .project-btn {
   color: black;
-  border-color: rgb(163, 163, 163);
+  border-color: var(--primary-color);
   height: 3rem;
   width: 7rem;
 }
