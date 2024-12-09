@@ -1,0 +1,61 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*font-family: 'Outfit', sans-serif;*/
+  font-family: 'Nanum Gothic Coding', monospace;
+  /*transition: 0.2s;*/
+}
+body{
+  background: #000;
+}
+
+h1,h4,p,a{
+  color:#fff;
+  text-decoration: none;
+}
+ul{
+  list-style-type: none;
+}
+.btn{
+  padding: 12px 32px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background:rgb(231, 235, 11);
+  color: #222;
+  border: 2px groove #fff;
+  font-weight: 600;
+  cursor:pointer;
+}
+
+.btn-light{
+  background: transparent;
+  color: #fff;
+  padding: 12px 32px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: 2px groove #fff;
+  font-weight: 600;
+  cursor:pointer;
+  border-radius: 5%;
+}
+.btn:hover{
+  background:rgba(255,255, 255, 0.2) ;
+  color: #fff;
+  transition: 0.1s;
+  border: 3px double #fff;
+}
+.btn-light:hover{
+  background:rgba(255,255, 255, 0.2) ;
+  color: #fff;
+  transition: 0.1s;
+  border: 3px double #fff;
+}
+@media screen and (max-width:1040px){
+  h1,h4,p,a{
+    font-size: normal;
+  }
+}
