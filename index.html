@@ -45,24 +45,16 @@
     </nav>
 
     <!--Profile section starts here-->
-    <section id="profile">
+    <section id="profile" class="profile-section">
       <div class="section__pic-container">
-        <img src="./assets/home.png" alt="Denis Omingo profile picture" />
+        <img src="./assets/denis-omingo.png" alt="Denis Omingo profile picture" class="profile-pic" />
+        <div class="overlay"></div>
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Denis Omingo</h1>
-        <p class="section__text__p2">A Pro WordPress Developer</p>
-        <!-- <div class="newsite">
-          <h4>NOTICE!</h4>
-          <span>THIS SITE HAS BEEN MOVED...CLICK THE Button below to be redirected...</span>
-          <button
-          class="btn btn-color-2"
-          onclick="window.open('https://omingodenis.vercel.app/')"
-        >
-          NEW PORTFOLIO SITE
-        </button>
-        </div> -->
+        <p class="section__text__p2">A Pro Web Developer</p>
+       
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -74,22 +66,25 @@
             Contact Info
           </button>
         </div>
-        <div id="socials-container">
+        <div id="socials-container" aria-label="Social media links">
           <img
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
-            onclick="location.href='https://www.linkedin.com/in/denis-omingo-bb9027231/'"
+            onclick="window.open('https://www.linkedin.com/in/denis-omingo-bb9027231/')"
           />
           <img
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="location.href='https://github.com/Denis-Omingo'"
+            onclick="window.open('https://github.com/Denis-Omingo')"
           />
         </div>
       </div>
     </section>
+
+    <!-- About Section -->
+    
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
@@ -124,7 +119,9 @@
           </div>
           <div class="text-container">
             <p>
-              Meet Denis, a dynamic WordPress developer with a knack for Visual Composer, plugins, and wireframes. Combining extensive experience in front-end and back-end technologies, Denis crafts innovative, user-friendly websites with precision and creativity. Always updated on industry trends, Denis excels at turning concepts into sleek, responsive, and visually engaging sites. From building robust e-commerce solutions to designing intuitive interfaces and enhancing site performance, Denis is committed to delivering exceptional results that surpass client expectations.
+              Meet Denis, a dynamic WordPress developer with a knack for Visual Composer, plugins, and wireframes. 
+              Combining extensive experience in front-end and back-end technologies, Denis crafts innovative, user-friendly websites with precision and creativity. Always updated on industry trends, Denis excels at turning concepts into sleek, responsive, and visually engaging sites.
+               From building robust e-commerce solutions to designing intuitive interfaces and enhancing site performance, I am committed to delivering exceptional results that surpass client expectations.
             </p>
           </div>
         </div>
@@ -302,214 +299,28 @@
         class="icon arrow"
         onclick="location.href='./#projects'"
       />
-    </section>
+    </section >
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-     <!-- <div class="newsite">
-      <span>View the most recent projects on my new website here...</span>
-      <button
-      class="btn btn-color-2"
-      onclick="window.open('https://omingodenis.vercel.app/')"
-    >
-      NEW PORTFOLIO SITE
-    </button>
-     </div> -->
-
-
-      <div class="portfolio">
-        <div class="projects-container color-container">
-          <div class="image-container">
-            <img
-              src="./assets/mern-estate.png"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-         <div class="detail-section">
-          <h2 class="experience-sub-title project-title">Real Estate</h2>
-          <h4 class="project-description"> MERN Stack Technology</h4>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/Denis-Omingo/real-estate-listing'"
-            >
-              Github
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://mern-estate-project-ubrf.onrender.com/'"
-            >
-              Live Demo
-            </button>
-          </div>
-         </div>
+    
+      <div class="filter-dropdown">
+        <button class="filter-btn">Filter By Category</button>
+        <span><small>E.g WordPress, Full Stack or Frontend</small></span>
+        <div class="dropdown-menu">
+          <button class="dropdown-item" data-category="all">All</button>
+          <button class="dropdown-item" data-category="wordpress">WordPress</button>
+          <button class="dropdown-item" data-category="full_stack">Full Stack</button>
+          <button class="dropdown-item" data-category="frontend">Frontend</button>
         </div>
-
-        <div class="projects-container color-container">
-          <div class="image-container">
-            <img
-              src="./assets/meditest.png"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-         <div class="detail-section">
-          <h2 class="experience-sub-title project-title">Laboratory</h2>
-          <h4 class="project-description">Wordpress Website</h4>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://meditestlaboratories.co.za/'"
-            >
-              View
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://meditestlaboratories.co.za/'"
-            >
-              Live Demo
-            </button>
-          </div>
-         </div>
-        </div>
-
-        <div class="projects-container color-container">
-          <div class="image-container">
-            <img
-              src="./assets/stejos.png"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <h2 class="experience-sub-title project-title">Stejos Tours</h2>
-          <h4 class="project-description">Wordpress Website</h4>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://stejostours.co.ke/'"
-            >
-              View
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://stejostours.co.ke/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="projects-container color-container">
-          <div class="image-container">
-            <img
-              src="./assets/blog.jpg"
-              alt="Blog website"
-              class="project-img"
-            />
-          </div>
-          <h2 class="experience-sub-title project-title">Blog website</h2>
-          <h4 class="project-description">Wordpress Website</h4>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://sexualhealthinsights.com/'"
-            >
-              View
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://sexualhealthinsights.com/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-          
-        <div class="projects-container color-container">
-          <div class="image-container">
-            <img
-              src="./assets/diapers-site.JPG"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <h2 class="experience-sub-title project-title">E-Commerce</h2>
-          <h4 class="project-description">WordPress</h4>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://wholesalebabydiapers.com/'"
-            >
-              View
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://wholesalebabydiapers.com/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="projects-container color-container">
-          <div class="image-container">
-            <img
-              src="./assets/furniture.png"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <h2 class="experience-sub-title project-title">Furniture Store</h2>
-          <h4 class="project-description">HTML,CSS & Angular</h4>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/Denis-Omingo/furniture-website'"
-            >
-              Github
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://amingoz-furniture-website-project.netlify.app/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="projects-container color-container">
-          <div class="image-container">
-            <img
-              src="./assets/flooring.JPG"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <h2 class="experience-sub-title project-title">Flooring</h2>
-          <h4 class="project-description">WordPress</h4>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://flooring.co.ke/'"
-            >
-            View
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://flooring.co.ke/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-       
-
       </div>
-      <h3>More projects available to showcase upon request</h3>
-
       
+      <div class="portfolio" id="projects-container">
+      
+      </div>
+      
+      
+      <h3>More projects available to showcase upon request</h3>
 
       <!--End of portfolio section-->
       <img
@@ -559,7 +370,7 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Denis Omingo. All Rights Reserved.</p>
+      <p>Copyright &#169; 2025 Denis Omingo. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
