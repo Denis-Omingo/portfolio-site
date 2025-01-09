@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 20000);
   }
 
-  
 
   // Show WhatsApp icon on page load
   showWhatsAppIcon();
@@ -97,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Tours Blog",
       description: "A Tours Blog Website using wordpress ",
       liveLink: "https://zanzibarworld.com/",
-      category: "SEO"||"wordpress",
+      category: {"SEO"||"wordpress"},
       technology:"Wordpress"
     },
      {
