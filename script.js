@@ -92,8 +92,23 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "wordpress",
       technology:"Wordpress"
     },
+     {
+      image: "./assets/zanzibar-tours.PNG",
+      title: "Tours Blog",
+      description: "A Tours Blog Website using wordpress ",
+      liveLink: "https://zanzibarworld.com/",
+      category: "wordpress",
+      technology:"Wordpress"
+    },
+     {
+      image: "./assets/ digital-agency.PNG",
+      title: "SEO Marketing",
+      description: "SEO Auditing and Blog Writing",
+      liveLink: "https://digitalagencynetwork.com/",
+      category: "wordpress",
+      technology:"Wordpress"
+    },
 
-    
     // Add a new project-for wordpress, no need for github url unless available
   ];
 
