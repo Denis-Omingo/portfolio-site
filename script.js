@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
       technology:"Wordpress"
     },
      {
-      image: "./assets/ digital-agency.PNG",
+      image: "./assets/digital-agency.PNG",
       title: "SEO Marketing",
       description: "SEO Auditing and Blog Writing",
       liveLink: "https://digitalagencynetwork.com/",
