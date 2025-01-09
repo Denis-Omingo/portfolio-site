@@ -2,7 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 :root{
-  --primary-color:rgb(16, 237, 38);
+  --primary-color:rgb(47, 128, 237);
+  --secondary-color:rgb(64, 145, 148);
 }
 * {
   margin: 0;
@@ -33,11 +34,16 @@ nav,
 .nav-links {
   display: flex;
 }
+#desktop-nav{
+  background:black;
+}
 
 nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  background: black;
+  box-shadow: mediumaquamarine;
 }
 
 .nav-links {
@@ -47,7 +53,7 @@ nav {
 }
 
 a {
-  color: rgb(30, 30, 29);
+  color: var(--secondary-color);
   text-decoration: none;
   text-decoration-color: white;
 }
@@ -62,12 +68,12 @@ a:hover {
 
 .logo {
   font-size: 2rem;
-  color: rgb(18, 140, 20);
+  color: var(--primary-color);
 }
 
 .logo:hover {
   cursor: default;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 /* hamburger menu */
@@ -76,10 +82,14 @@ a:hover {
   display: none;
 }
 
+
 .hamburger-menu {
   position: relative;
   display: inline-block;
+ 
+  z-index: 2;
 }
+
 
 .hamburger-icon {
   display: flex;
@@ -103,8 +113,8 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
-  width: fit-content;
+  background-color: black;
+  width: 28rem;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
@@ -115,7 +125,7 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: var(--secondary-color);
   text-decoration: none;
   transition: all 0.7 ease-in-out;
 }
@@ -162,8 +172,8 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  min-height: 96vh;
-  margin: 0 10rem;
+  min-height: 50vh;
+  margin: 0 1rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -178,15 +188,26 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  min-height: 90vh;
+  min-height: 30vh;
   margin-bottom: 2rem;
 }
 
 .section__pic-container {
+  position:relative;
   display: flex;
   height: 400px;
   width: 400px;
   margin: auto 0;
+ 
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Adjust the height of the overlay */
+  background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
 }
 
 .section__text {
@@ -207,40 +228,12 @@ section {
   margin-bottom: 1rem;
 }
 
-.newsite{
-  background-color: rgba(116, 110, 110, 0.5);
-  border-radius: 15px;
-  padding: 2rem;
-}
-.newsite h4{
-  font-weight: 900;
-  color: red;
-  font-style: italic;
-  font-size: 20px;
-}
-.newsite span{
-  font-weight: 700;
-  color: rgb(221, 31, 31);
-  font-size: 15px;
-}
-.newsite button{
-  width: 100%;
-  background-color: orange;
-  color: white;
-  font-size: 20px;
- 
-}
-.newsite button:hover{
-  background-color: red ;
-  font-style: oblique;
-  color: white;
- 
-}
 .title {
   font-size: 3rem;
   text-align: center;
   color: var(--primary-color);
 }
+
 
 #socials-container {
   display: flex;
@@ -281,7 +274,7 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: var(--secondary-color) solid;
 }
 
 .btn-color-1:hover,
@@ -426,21 +419,74 @@ article p{
   position: relative;
 }
 
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: white;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: black;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.filter-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
 .portfolio{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
+  justify-items: center;
   gap:2rem;
 }
 
 .projects-container {
-  padding: 0rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  height: 22rem;
+  padding: .2 rem;
+  background:rgb(252, 252, 252);
+  border: 1px solid #ddd;
   text-align: center;
-  height: 30rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; 
+  box-sizing: border-box;
 }
 
 .color-container {
@@ -449,34 +495,49 @@ article p{
 
 }
 .image-container{
-  height: 65%;
+  height: 70%;
 
 }
 
 .project-img {
   width: 100%;
   height: 100%;
-  border-radius: 2rem 2rem 0 0;
+  object-fit: cover;
 }
 
 .project-title {
-  margin: .5rem;
-  color: black;
+  margin: .6 rem 0;
+  font-size: 1.5rem;
 }
 .project-description{
   font-size: .8rem;
-  color: rgb(5, 18, 72);
-  padding-bottom: .3rem;
+  color: #555;
+  padding-bottom: .8rem;
+  border-bottom: 1px dotted grey;
+}
+.project-links a {
+  margin: 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  background-color: white;
+  color:var(--primary-color);
+  transition: 100ms;
+  border:1px dashed var(--primary-color);
 }
 
 .project-btn {
-  color: black;
   border-color: var(--primary-color);
   height: 3rem;
   width: 7rem;
-}
+  padding:.2rem 2rem;
+  margin-top: 1.2rem;
+} 
 
-/* Contacts page */
+/* /Contacts page */
 
 #contact {
   display: flex;
@@ -598,5 +659,35 @@ nav {
     transform: translateY(-5px);
   }
 }
+/* Profile animations */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
+.profile-pic {
+  animation: float 4s ease-in-out infinite;
+}
 
+/* TYPING EFFECT */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
