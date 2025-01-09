@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Tours Blog",
       description: "A Tours Blog Website using wordpress ",
       liveLink: "https://zanzibarworld.com/",
-      category: "wordpress",
+      category: "SEO"||"wordpress",
       technology:"Wordpress"
     },
      {
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "SEO Marketing",
       description: "SEO Auditing and Blog Writing",
       liveLink: "https://digitalagencynetwork.com/",
-      category: "wordpress",
+      category: "SEO",
       technology:"Wordpress"
     },
 
